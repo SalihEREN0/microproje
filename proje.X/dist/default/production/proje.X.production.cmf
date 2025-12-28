@@ -1,0 +1,264 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/main.o
+resetVec CODE 0 0 0 1 2 1
+code CODE 0 77A 77A 86 2 1
+udata_bank0 BANK0 1 20 20 8 1 1
+config CONFIG 4 2007 2007 1 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 28-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 28-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 1-779 2
+CONST 800-1FFF 2
+ENTRY 1-779 2
+ENTRY 800-1FFF 2
+IDLOC 2000-2003 2
+CODE 1-779 2
+CODE 800-1FFF 2
+SFR0 2-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 70-7F 1
+EEDATA 2100-21FF 2
+STRCODE 1-779 2
+STRCODE 800-1FFF 2
+STRING 1-779 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/main.o
+0 resetVec CODE >35:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77A code CODE >43:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77B code CODE >44:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77C code CODE >45:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77D code CODE >46:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77E code CODE >47:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77F code CODE >48:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+780 code CODE >49:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+781 code CODE >50:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+782 code CODE >51:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+783 code CODE >52:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+784 code CODE >55:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+785 code CODE >58:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+786 code CODE >59:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+787 code CODE >60:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+788 code CODE >61:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+789 code CODE >62:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78A code CODE >63:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78B code CODE >67:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78D code CODE >68:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78E code CODE >69:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78F code CODE >70:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+790 code CODE >71:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+791 code CODE >72:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+792 code CODE >73:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+793 code CODE >75:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+794 code CODE >76:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+795 code CODE >78:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+797 code CODE >79:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+798 code CODE >80:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+799 code CODE >82:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79A code CODE >83:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79B code CODE >84:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79C code CODE >85:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79D code CODE >87:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79E code CODE >88:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79F code CODE >89:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A0 code CODE >90:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A1 code CODE >92:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A2 code CODE >93:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A3 code CODE >98:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A5 code CODE >99:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A6 code CODE >101:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A7 code CODE >102:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A8 code CODE >104:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AA code CODE >105:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AB code CODE >107:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AD code CODE >108:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AE code CODE >111:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AF code CODE >112:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B0 code CODE >115:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B1 code CODE >116:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B2 code CODE >117:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B3 code CODE >118:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B4 code CODE >119:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B5 code CODE >123:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B7 code CODE >124:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B8 code CODE >125:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B9 code CODE >126:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BA code CODE >127:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BB code CODE >128:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BC code CODE >131:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BE code CODE >132:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BF code CODE >133:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C0 code CODE >134:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C1 code CODE >137:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C3 code CODE >138:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C4 code CODE >139:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C5 code CODE >140:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C6 code CODE >144:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C8 code CODE >145:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C9 code CODE >146:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CA code CODE >147:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CB code CODE >150:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CC code CODE >151:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CD code CODE >152:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CE code CODE >153:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CF code CODE >155:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D0 code CODE >156:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D1 code CODE >157:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D2 code CODE >160:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D3 code CODE >164:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D5 code CODE >165:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D6 code CODE >166:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D7 code CODE >170:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D8 code CODE >171:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D9 code CODE >172:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DA code CODE >174:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DC code CODE >175:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DD code CODE >176:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DE code CODE >177:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DF code CODE >180:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E1 code CODE >181:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E2 code CODE >182:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E3 code CODE >183:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E4 code CODE >185:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E6 code CODE >186:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E7 code CODE >187:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E8 code CODE >188:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E9 code CODE >190:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7EB code CODE >191:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7EC code CODE >192:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7ED code CODE >195:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7EF code CODE >196:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F0 code CODE >197:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F1 code CODE >198:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F2 code CODE >202:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F3 code CODE >203:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F4 code CODE >207:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F5 code CODE >208:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F6 code CODE >210:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F7 code CODE >211:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F8 code CODE >212:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F9 code CODE >216:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FB code CODE >217:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FC code CODE >218:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FD code CODE >220:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FE code CODE >221:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FF code CODE >222:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 28 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+__Hudata_bank0 2 0 ABS 0 udata_bank0 -
+__Hudata_bank1 2 0 ABS 0 udata_bank1 -
+__Hudata_bank2 2 0 ABS 0 udata_bank2 -
+__Hudata_bank3 2 0 ABS 0 udata_bank3 -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__LresetVec 0 0 CODE 0 resetVec -
+__HresetVec 2 0 CODE 0 resetVec -
+__Hedata 2 0 ABS 0 edata -
+__Hudata 2 0 ABS 0 udata -
+__Hconfig 4010 0 CONFIG 4 config -
+__Ledata 2 0 ABS 0 edata -
+__Ludata 2 0 ABS 0 udata -
+__Hcode 2 0 ABS 0 code -
+__Hdata 2 0 ABS 0 data -
+__Lcode 2 0 ABS 0 code -
+__Ldata 2 0 ABS 0 data -
+__S0 800 0 ABS 0 - -
+__S1 28 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lconfig 0 0 CONFIG 4 config -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank0 2 0 ABS 0 udata_bank0 -
+__Ludata_bank1 2 0 ABS 0 udata_bank1 -
+__Ludata_bank2 2 0 ABS 0 udata_bank2 -
+__Ludata_bank3 2 0 ABS 0 udata_bank3 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Hudata_shr 2 0 ABS 0 udata_shr -
+__Ludata_shr 2 0 ABS 0 udata_shr -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+resetVec 0 0 0 1 2
+code 0 77A EF4 86 2
+udata_bank0 1 20 20 8 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
