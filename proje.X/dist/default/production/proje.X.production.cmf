@@ -13,8 +13,8 @@
 %PSECTS
 $build/default/production/main.o
 resetVec CODE 0 0 0 1 2 1
-code CODE 0 77A 77A 86 2 1
-udata_bank0 BANK0 1 20 20 8 1 1
+code CODE 0 6EC 6EC 114 2 1
+udata_bank0 BANK0 1 20 20 12 1 1
 config CONFIG 4 2007 2007 1 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -22,20 +22,20 @@ config CONFIG 4 2007 2007 1 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 28-6F 1
+RAM 32-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 28-6F 1
+BANK0 32-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 1-779 2
+CONST 1-6EB 2
 CONST 800-1FFF 2
-ENTRY 1-779 2
+ENTRY 1-6EB 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
-CODE 1-779 2
+CODE 1-6EB 2
 CODE 800-1FFF 2
 SFR0 2-1F 1
 SFR1 80-9F 1
@@ -43,9 +43,9 @@ SFR2 100-10F 1
 SFR3 180-18F 1
 COMMON 70-7F 1
 EEDATA 2100-21FF 2
-STRCODE 1-779 2
+STRCODE 1-6EB 2
 STRCODE 800-1FFF 2
-STRING 1-779 2
+STRING 1-6EB 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -61,125 +61,243 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $build/default/production/main.o
-0 resetVec CODE >35:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-77A code CODE >43:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-77B code CODE >44:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-77C code CODE >45:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-77D code CODE >46:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-77E code CODE >47:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-77F code CODE >48:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-780 code CODE >49:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-781 code CODE >50:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-782 code CODE >51:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-783 code CODE >52:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-784 code CODE >55:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-785 code CODE >58:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-786 code CODE >59:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-787 code CODE >60:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-788 code CODE >61:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-789 code CODE >62:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-78A code CODE >63:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-78B code CODE >67:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-78D code CODE >68:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-78E code CODE >69:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-78F code CODE >70:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-790 code CODE >71:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-791 code CODE >72:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-792 code CODE >73:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-793 code CODE >75:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-794 code CODE >76:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-795 code CODE >78:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-797 code CODE >79:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-798 code CODE >80:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-799 code CODE >82:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-79A code CODE >83:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-79B code CODE >84:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-79C code CODE >85:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-79D code CODE >87:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-79E code CODE >88:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-79F code CODE >89:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7A0 code CODE >90:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7A1 code CODE >92:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7A2 code CODE >93:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7A3 code CODE >98:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7A5 code CODE >99:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7A6 code CODE >101:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7A7 code CODE >102:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7A8 code CODE >104:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7AA code CODE >105:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7AB code CODE >107:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7AD code CODE >108:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7AE code CODE >111:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7AF code CODE >112:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B0 code CODE >115:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B1 code CODE >116:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B2 code CODE >117:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B3 code CODE >118:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B4 code CODE >119:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B5 code CODE >123:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B7 code CODE >124:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B8 code CODE >125:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7B9 code CODE >126:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7BA code CODE >127:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7BB code CODE >128:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7BC code CODE >131:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7BE code CODE >132:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7BF code CODE >133:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7C0 code CODE >134:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7C1 code CODE >137:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7C3 code CODE >138:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7C4 code CODE >139:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7C5 code CODE >140:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7C6 code CODE >144:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7C8 code CODE >145:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7C9 code CODE >146:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7CA code CODE >147:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7CB code CODE >150:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7CC code CODE >151:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7CD code CODE >152:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7CE code CODE >153:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7CF code CODE >155:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D0 code CODE >156:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D1 code CODE >157:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D2 code CODE >160:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D3 code CODE >164:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D5 code CODE >165:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D6 code CODE >166:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D7 code CODE >170:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D8 code CODE >171:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7D9 code CODE >172:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7DA code CODE >174:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7DC code CODE >175:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7DD code CODE >176:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7DE code CODE >177:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7DF code CODE >180:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7E1 code CODE >181:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7E2 code CODE >182:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7E3 code CODE >183:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7E4 code CODE >185:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7E6 code CODE >186:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7E7 code CODE >187:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7E8 code CODE >188:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7E9 code CODE >190:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7EB code CODE >191:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7EC code CODE >192:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7ED code CODE >195:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7EF code CODE >196:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F0 code CODE >197:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F1 code CODE >198:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F2 code CODE >202:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F3 code CODE >203:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F4 code CODE >207:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F5 code CODE >208:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F6 code CODE >210:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F7 code CODE >211:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F8 code CODE >212:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7F9 code CODE >216:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7FB code CODE >217:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7FC code CODE >218:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7FD code CODE >220:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7FE code CODE >221:C:\Users\salih\MPLABXProjects\proje.X\main.asm
-7FF code CODE >222:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+0 resetVec CODE >48:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6EC code CODE >54:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6ED code CODE >58:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6EE code CODE >61:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6EF code CODE >64:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F0 code CODE >65:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F1 code CODE >67:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F2 code CODE >71:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F4 code CODE >72:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F5 code CODE >73:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F6 code CODE >74:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F7 code CODE >75:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F8 code CODE >76:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6F9 code CODE >79:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6FA code CODE >80:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6FB code CODE >82:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6FD code CODE >83:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6FE code CODE >84:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+6FF code CODE >85:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+700 code CODE >86:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+701 code CODE >87:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+702 code CODE >90:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+703 code CODE >91:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+704 code CODE >93:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+705 code CODE >96:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+707 code CODE >97:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+708 code CODE >100:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+70A code CODE >101:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+70B code CODE >102:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+70C code CODE >104:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+70D code CODE >108:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+70F code CODE >109:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+710 code CODE >110:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+711 code CODE >112:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+712 code CODE >113:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+713 code CODE >115:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+714 code CODE >118:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+715 code CODE >119:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+716 code CODE >122:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+718 code CODE >123:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+719 code CODE >124:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+71B code CODE >125:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+71C code CODE >127:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+71E code CODE >128:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+71F code CODE >129:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+721 code CODE >130:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+722 code CODE >133:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+723 code CODE >134:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+724 code CODE >138:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+726 code CODE >139:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+727 code CODE >140:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+729 code CODE >141:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+72A code CODE >146:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+72C code CODE >147:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+72D code CODE >148:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+72F code CODE >149:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+730 code CODE >150:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+731 code CODE >152:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+732 code CODE >153:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+733 code CODE >156:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+735 code CODE >157:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+736 code CODE >158:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+738 code CODE >159:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+739 code CODE >161:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+73A code CODE >167:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+73C code CODE >168:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+73D code CODE >169:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+73E code CODE >170:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+73F code CODE >171:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+740 code CODE >173:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+741 code CODE >174:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+742 code CODE >178:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+743 code CODE >179:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+744 code CODE >180:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+745 code CODE >181:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+746 code CODE >184:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+747 code CODE >185:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+748 code CODE >186:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+749 code CODE >187:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+74A code CODE >190:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+74B code CODE >191:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+74C code CODE >192:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+74D code CODE >193:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+74E code CODE >195:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+74F code CODE >196:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+750 code CODE >197:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+751 code CODE >198:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+752 code CODE >201:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+753 code CODE >202:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+754 code CODE >203:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+755 code CODE >206:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+756 code CODE >207:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+757 code CODE >208:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+758 code CODE >209:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+759 code CODE >213:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+75B code CODE >214:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+75C code CODE >215:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+75D code CODE >217:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+75E code CODE >218:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+75F code CODE >220:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+760 code CODE >221:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+761 code CODE >224:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+762 code CODE >227:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+764 code CODE >228:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+765 code CODE >229:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+766 code CODE >230:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+767 code CODE >233:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+769 code CODE >234:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+76A code CODE >235:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+76B code CODE >236:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+76C code CODE >239:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+76E code CODE >240:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+76F code CODE >241:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+770 code CODE >242:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+771 code CODE >247:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+773 code CODE >248:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+774 code CODE >249:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+775 code CODE >250:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+776 code CODE >255:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+777 code CODE >256:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+778 code CODE >258:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77A code CODE >259:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77B code CODE >260:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77C code CODE >261:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77D code CODE >262:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77E code CODE >263:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+77F code CODE >266:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+780 code CODE >267:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+781 code CODE >269:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+782 code CODE >273:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+783 code CODE >274:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+784 code CODE >276:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+785 code CODE >277:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+786 code CODE >278:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+787 code CODE >279:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+788 code CODE >280:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+789 code CODE >281:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78A code CODE >282:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78B code CODE >284:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78C code CODE >285:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78D code CODE >293:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+78F code CODE >294:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+790 code CODE >295:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+791 code CODE >299:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+792 code CODE >300:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+794 code CODE >301:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+795 code CODE >302:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+796 code CODE >303:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+797 code CODE >304:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+799 code CODE >305:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79A code CODE >306:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79B code CODE >307:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79C code CODE >310:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79D code CODE >311:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+79F code CODE >312:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A0 code CODE >313:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A1 code CODE >314:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A2 code CODE >316:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A4 code CODE >317:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A5 code CODE >318:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A7 code CODE >319:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A8 code CODE >320:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7A9 code CODE >321:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AA code CODE >324:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AB code CODE >325:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AD code CODE >326:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AE code CODE >327:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7AF code CODE >328:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B0 code CODE >329:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B2 code CODE >330:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B3 code CODE >331:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B4 code CODE >332:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B5 code CODE >335:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B6 code CODE >336:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B8 code CODE >337:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7B9 code CODE >338:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BA code CODE >339:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BB code CODE >340:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BD code CODE >341:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BE code CODE >342:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7BF code CODE >343:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C0 code CODE >345:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C2 code CODE >346:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C3 code CODE >347:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C4 code CODE >349:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C5 code CODE >350:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C6 code CODE >353:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C8 code CODE >354:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7C9 code CODE >355:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CB code CODE >356:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CC code CODE >357:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CD code CODE >361:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7CF code CODE >362:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D0 code CODE >363:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D1 code CODE >364:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D2 code CODE >365:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D3 code CODE >366:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D5 code CODE >367:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D6 code CODE >368:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D7 code CODE >372:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7D9 code CODE >373:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DA code CODE >374:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DB code CODE >375:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DC code CODE >376:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DD code CODE >377:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DE code CODE >378:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7DF code CODE >383:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E0 code CODE >384:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E1 code CODE >385:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E2 code CODE >386:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E3 code CODE >387:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E4 code CODE >388:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E5 code CODE >389:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E6 code CODE >390:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E7 code CODE >391:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E8 code CODE >392:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7E9 code CODE >393:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7EA code CODE >397:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7EC code CODE >398:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7ED code CODE >399:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7EE code CODE >401:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7EF code CODE >402:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F0 code CODE >403:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F1 code CODE >404:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F2 code CODE >405:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F3 code CODE >406:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F4 code CODE >407:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F5 code CODE >411:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F7 code CODE >412:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F8 code CODE >413:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7F9 code CODE >415:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FA code CODE >416:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FB code CODE >418:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FC code CODE >419:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FD code CODE >420:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FE code CODE >421:C:\Users\salih\MPLABXProjects\proje.X\main.asm
+7FF code CODE >422:C:\Users\salih\MPLABXProjects\proje.X\main.asm
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -193,7 +311,7 @@ $build/default/production/main.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 28 0 ABS 0 - -
+__Hspace_1 32 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 400F 0 ABS 0 - -
 __Hudata_bank0 2 0 ABS 0 udata_bank0 -
@@ -213,7 +331,7 @@ __Hdata 2 0 ABS 0 data -
 __Lcode 2 0 ABS 0 code -
 __Ldata 2 0 ABS 0 data -
 __S0 800 0 ABS 0 - -
-__S1 28 0 ABS 0 - -
+__S1 32 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lconfig 0 0 CONFIG 4 config -
 __Lspace_0 0 0 ABS 0 - -
@@ -252,8 +370,8 @@ __Ludata_shr 2 0 ABS 0 udata_shr -
 # All other numeric quantities are in decimal.
 %SEGMENTS
 resetVec 0 0 0 1 2
-code 0 77A EF4 86 2
-udata_bank0 1 20 20 8 1
+code 0 6EC DD8 114 2
+udata_bank0 1 20 20 12 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
